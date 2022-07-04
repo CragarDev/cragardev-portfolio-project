@@ -4,7 +4,7 @@
 }
 
 .app__whitebg {
-  background-color: var(--white-color);
+  background-color: var(--lightGray-color);
 }
 
 .app__primarybg {
@@ -44,7 +44,8 @@
   align-items: flex-end;
 
   p {
-    text-transform: uppercase;
+    font-size: .75rem;
+    text-transform: lowercase;
     color: var(--black-color);
   }
 }
