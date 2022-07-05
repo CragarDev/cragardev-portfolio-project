@@ -105,8 +105,8 @@
   padding: 1rem;
 
   div {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: var(--white-color);
     margin: 0.25rem 0;
@@ -132,13 +132,13 @@
     }
 
     @media screen and (min-width: 2000px) {
-      width: 70px;
-      height: 70px;
+      width: 50px;
+      height: 50px;
       margin: 0.5rem 0;
 
       svg {
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
       }
     }
   }
