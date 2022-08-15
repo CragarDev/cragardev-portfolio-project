@@ -24,8 +24,8 @@
         margin: 0.5rem;
 
         &:hover {
-            background-color: var(--secondary-color);
-            color: #fff;
+            background-color: var(--lightblue-color);
+            color: var(--darkblue-color);
         }
 
         @media screen and (min-width: 2000px) {
@@ -36,8 +36,8 @@
     }
 
     .item-active {
-        background-color: var(--secondary-color);
-        color: #fff;
+        background-color: var(--secondary-color) !important;
+        color: var(--darkorange-color) !important;
     }
 }
 
@@ -60,13 +60,15 @@
         transform: all 0.3s ease;
 
         &:hover {
-            box-shadow: 0 0 25px 0 rgba(191, 11, 59, 0.2);
-            // background-color: var(--secondary-color);
-            // color: #fff;
+            box-shadow: 0 0 30px 0 var(--darkerorange-color);
+            scale: 1.1;
+            transition: all 0.3s ease-in-out;
+
+
         }
 
         @media screen and (min-width: 2000px) {
-            width: 470px;
+            width: 350px;
             padding: 1.25rem;
             border-radius: 0.75rem;
         }

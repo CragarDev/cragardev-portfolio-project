@@ -38,7 +38,7 @@ const Work = () => {
   return (
     <>
       <h2 className='head-text'>
-        My development <span>Portfolio</span> Section
+        <span>Portfolio</span> of some of my works...
       </h2>
 
       <div className='app__work-filter'>
@@ -49,9 +49,9 @@ const Work = () => {
           'React',
           'Angular',
           'NodeJs',
-          'UI/UX',
           'E-Commerce',
           'Full Stack',
+          'HTML/CSS',
           'All'
         ].map((item, index) => (
           <div
@@ -131,7 +131,7 @@ const Work = () => {
 //   Work, 'projects')
 
 export default AppWrap(
-  MotionWrap(Work, 'app__projects'),
+  MotionWrap(Work, 'app__works'),
   'projects',
-  'app__primarybg'
+  'app__darkbluebg'
 )
