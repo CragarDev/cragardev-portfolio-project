@@ -21,9 +21,9 @@ const About = () => {
     <>
       <div id='about' className='app__about'>
         <h2 className='head-text'>
-          A little bit <span>About me...</span>
+          <span>A little bit</span> About me...
           <br />
-          based out of <span>Norman, OK</span>
+          <span>I'm based out of</span> Norman, OK
         </h2>
         <div className='app__profiles'>
           {about.map((abt, index) => (
@@ -35,7 +35,11 @@ const About = () => {
               key={abt.name + index}
             >
               <img src={urlFor(abt.imgurl)} alt={abt.name} />
-              <h2 className='bold-text' style={{ marginTop: 20 }}>
+              <h2
+                id='abt-title'
+                className='bold-text'
+                style={{ marginTop: 20 }}
+              >
                 {abt.name}
               </h2>
               <p className='p-text' style={{ marginTop: 10 }}>

@@ -13,6 +13,7 @@ import bolt from "../../src/assets/bolt.png";
 import circle from "../../src/assets/circle.svg";
 import circle_02 from "../../src/assets/circle_02.svg";
 import circle_03 from "../../src/assets/circle_03.svg";
+import circle_04 from "../../src/assets/circle_04.svg";
 import cpp from "../../src/assets/cpp.png";
 import css from "../../src/assets/css.png";
 import email from "../../src/assets/email.png";
@@ -22,6 +23,8 @@ import git from "../../src/assets/git.png";
 import graphql from "../../src/assets/graphql.png";
 import html from "../../src/assets/html.png";
 import javascript from "../../src/assets/javascript.png";
+import java from "../../src/assets/JavaLogo.png";
+import java2 from "../../src/assets/JavaLogo2.png";
 import logoP from "../../src/assets/logoP.png";
 import navMenuBg2 from "../../src/assets/navMenuBg2.png";
 import navMenuBg3 from "../../src/assets/navMenuBg3.png";
@@ -80,6 +83,7 @@ export default {
   circle,
   circle_02,
   circle_03,
+  circle_04,
   cpp,
   css,
   email,
@@ -89,6 +93,8 @@ export default {
   graphql,
   html,
   javascript,
+  java,
+  java2,
   logoP,
   // logo,
   mobile,

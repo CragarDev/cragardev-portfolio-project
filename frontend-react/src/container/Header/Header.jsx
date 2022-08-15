@@ -53,7 +53,7 @@ const Header = () => {
               duration: 1,
               ease: 'easeInOut'
             }}
-            src={images.circle_03}
+            src={images.circle_04}
             alt='profile_circle'
           />
         </motion.div>
@@ -63,7 +63,7 @@ const Header = () => {
           whileInView={scaleVariants.whileInView}
           className='app__header-circles'
         >
-          {[images.javascript, images.react, images.python].map(
+          {[images.react, images.javascript, images.python, images.java2].map(
             (circle, index) => (
               <div className='circle-cmp app__flex' key={`circle-${index}`}>
                 <img src={circle} alt='skill' />
