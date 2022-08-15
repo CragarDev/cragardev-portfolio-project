@@ -29,7 +29,7 @@ const Header = () => {
               <span>👋</span>
               <div style={{ marginLeft: 20 }}>
                 {/* <p className='p-text'>Hey, how's it going?</p> */}
-                <p className='p-text'>Hi, My name is</p>
+                <p className='p-text'>Hello, My name is</p>
                 <h1 className='head-text'>Craig</h1>
               </div>
             </div>
@@ -45,12 +45,15 @@ const Header = () => {
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.85, delayChildren: 0.85 }}
         >
-          <img src={images.CraigAvatarStanding01} alt='profile' />
+          <img src={images.CraigAvatarStanding02} alt='profile' />
           <motion.img
             className='overlay_circle'
             whileInView={{ scale: [0, 1] }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
-            src={images.circle_02}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut'
+            }}
+            src={images.circle_03}
             alt='profile_circle'
           />
         </motion.div>

@@ -3,13 +3,24 @@
 :root {
   --font-family: "Quicksand", sans-serif;
 
-  --primary-color: #d9d9d9;
-  --secondary-color: #bf0b3b;
+  --primary-color: #ede7e3;
+  --secondary-color: #fb8500;
   --black-color: #0d0d0d;
   --lightGray-color: #7f7f7f;
   --gray-color: #373737;
-  --darkred-color: #731022;
+  --darkerorange-color: #713d00;
   --white-color: #f0f0f0;
+
+  /* darkred */
+
+  /* from palette */
+  --lightblue-color: #82c0cc;
+  --mediumblue-color: #489fb5;
+  --darkblue-color: #207486;
+  --darkerblue-color: #0a272d;
+  --lightorange-color: #ffb703;
+  --mediumorange-color: #fb8500;
+  --darkorange-color: #a95a00;
 }
 
 * {

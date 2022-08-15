@@ -26,7 +26,7 @@ const NavBar = () => {
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
-        <img src={images.CragarDevLogo3} alt='logo' />
+        <img src={images.CragarDevLogo6} alt='logo' />
       </div>
       <h3>{windowWidth}</h3>
       <ul className='app__navbar-links'>
