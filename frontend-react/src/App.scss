@@ -3,6 +3,30 @@
   font-family: var(--font-family);
 }
 
+.app__headerbg {
+  position: relative;
+  background: url('./assets/HeaderBg07.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.app__aboutbg {
+  position: relative;
+  background: url('./assets/AboutBg01.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.app__footerbg {
+  position: relative;
+  background: url('./assets/HeaderBg07.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .app__whitebg {
   background-color: var(--lightGray-color);
 }
@@ -97,10 +121,36 @@
   }
 }
 
+.p-text_dark {
+  font-size: 1.1rem;
+  text-align: left;
+  color: var(--gray-color);
+  line-height: 1.5;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
+
 .bold-text {
   font-size: 1rem;
   font-weight: 800;
   color: var(--darkblue-color);
+  text-align: left;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.9rem;
+  }
+}
+
+.bold-text_orange {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--secondary-color);
   text-align: left;
 
   @media screen and (min-width: 2000px) {

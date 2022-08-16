@@ -39,17 +39,19 @@ const Footer = () => {
   }
   return (
     <>
-      <h2 className='head-text'>Grab a coffee and let's chat...</h2>
+      <h2 className='head-text'>
+        <span>Grab a coffee... </span> let's chat!
+      </h2>
       <div className='app__footer-cards'>
         <div className='app__footer-card'>
-          <img src={images.mobile} alt='mobile' />
-          <a href='tel:+1 (214) 957-0713' className='p-text'>
+          <img src={images.celphone} alt='mobile' />
+          <a href='tel:+1 (214) 957-0713' className='p-text_dark'>
             cel: +1 (214) 957-0713
           </a>
         </div>
         <div className='app__footer-card'>
-          <img src={images.email} alt='email' />
-          <a href='mailto:cragardev@gmail.comn' className='p-text'>
+          <img src={images.email01} alt='email' />
+          <a href='mailto:cragardev@gmail.comn' className='p-text_dark'>
             email: cragardev@gmail.com
           </a>
         </div>
@@ -86,7 +88,7 @@ const Footer = () => {
               placeholder='Your Message'
             ></textarea>
           </div>
-          <button className='p-text' type='button' onClick={handleSubmit}>
+          <button className='p-text_dark' type='button' onClick={handleSubmit}>
             {loading ? 'SENDING' : 'Send Message'}
           </button>
         </div>
@@ -100,5 +102,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
   'contact',
-  'app__whitebg'
+  'app__footerbg'
 )

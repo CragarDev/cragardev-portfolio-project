@@ -10,6 +10,7 @@ import asus from "../../src/assets/asus.png";
 import bgIMG from "../../src/assets/bgIMG.png";
 import bgWhite from "../../src/assets/bgWhite.png";
 import bolt from "../../src/assets/bolt.png";
+import celphone from "../../src/assets/Celphone_01.svg";
 import circle from "../../src/assets/circle.svg";
 import circle_02 from "../../src/assets/circle_02.svg";
 import circle_03 from "../../src/assets/circle_03.svg";
@@ -17,6 +18,7 @@ import circle_04 from "../../src/assets/circle_04.svg";
 import cpp from "../../src/assets/cpp.png";
 import css from "../../src/assets/css.png";
 import email from "../../src/assets/email.png";
+import email01 from "../../src/assets/Email_01.svg";
 import figma from "../../src/assets/figma.png";
 import flutter from "../../src/assets/flutter.png";
 import git from "../../src/assets/git.png";
@@ -64,6 +66,7 @@ export default {
   craigAvatar,
   CraigAvatarStanding01,
   CraigAvatarStanding02,
+  celphone,
   HeaderBg01,
   HeaderBg02,
   aboutBg01,
@@ -87,6 +90,7 @@ export default {
   cpp,
   css,
   email,
+  email01,
   figma,
   flutter,
   git,

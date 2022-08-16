@@ -23,17 +23,17 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin: 1rem 0;
-        padding: 1.25rem 3rem;
+        margin: 1rem 1rem;
+        padding: .25rem;
         border-radius: 10px;
         cursor: pointer;
-        background-color: var(--primary-color);
+        background-color: var(--mediumblue-color);
         transition: all 0.3s ease-in-out;
 
         img {
-            width: 40px;
-            height: 40px;
-            margin-right: 0 0.7rem;
+            width: 80px;
+            height: 80px;
+            margin: 0;
         }
 
         p {
@@ -44,6 +44,7 @@
         a {
             text-decoration: none;
             font-weight: 500;
+            margin: 0 2rem
         }
 
         &:hover {
@@ -83,7 +84,7 @@
             border: none;
             border-radius: 10px;
             font-family: var(--font-family);
-            color: var(--secondary-color);
+            color: var(--darkorange-color);
             background-color: var(--primary-color);
             transition: all 0.3s ease-in-out;
             outline: none;
@@ -108,7 +109,7 @@
         border: none;
         background-color: var(--secondary-color);
         font-weight: 500;
-        color: var(--white-color);
+        // color: var(--white-color);
         font-family: var(--font-family);
         outline: none;
         margin: 2rem 0 0 0;
