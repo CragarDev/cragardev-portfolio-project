@@ -15,6 +15,10 @@
   background-color: var(--darkblue-color);
 }
 
+.app__graybg {
+  background-color: var(--gray-color);
+}
+
 .app__container {
   width: 100%;
   min-height: 100vh;
@@ -97,6 +101,21 @@
   font-size: 1rem;
   font-weight: 800;
   color: var(--darkblue-color);
+  text-align: left;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.9rem;
+  }
+}
+
+.bold-text-exp {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--mediumblue-color);
   text-align: left;
 
   @media screen and (min-width: 2000px) {

@@ -26,7 +26,9 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className='head-text'>Skills and Experience</h2>
+      <h2 className='head-text'>
+        <span>Skills </span> and <span>Experience</span>
+      </h2>
       <div className='app__skills-container'>
         <motion.div className='app__skills-list'>
           {skills.map(
@@ -41,7 +43,7 @@ const Skills = () => {
                 >
                   <div
                     className='app__flex'
-                    style={{ backgroundColor: skill.bgColor }}
+                    style={{ backgroundColor: skill.bgcolor }}
                   >
                     <img src={urlFor(skill.icon)} alt={skill.name} />
                   </div>
@@ -74,7 +76,7 @@ const Skills = () => {
                       data-for={`name-${work.name}`}
                       key={`name-${work.name}`}
                     >
-                      <h4 className='bold-text'>{work.name}</h4>
+                      <h4 className='bold-text-exp'>{work.name}</h4>
                       <p className='p-text'>{work.company}</p>
                       {/* <p className='p-text'>{work.description}</p> */}
                     </motion.div>
@@ -100,5 +102,5 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),
   'skills',
-  'app__whitebg'
+  'app__graybg'
 )
