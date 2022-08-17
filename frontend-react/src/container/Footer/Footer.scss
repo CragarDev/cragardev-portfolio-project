@@ -49,7 +49,7 @@
 
         &:hover {
             background-color: var(--secondary-color);
-            box-shadow: 0 0 25px var(--darkerorange-color);
+            box-shadow: 0 0 25px var(--mediumblue-color);
         }
 
         @media screen and (max-width: 450px) {
@@ -98,7 +98,7 @@
         }
 
         &:hover {
-            box-shadow: 0 0 25px var(--darkerorange-color);
+            box-shadow: 0 0 25px var(--mediumblue-color);
         }
 
     }
@@ -116,7 +116,8 @@
         cursor: pointer;
 
         &:hover {
-            box-shadow: 0 0 25px var(--darkerorange-color);
+            background-color: var(--mediumblue-color);
+            box-shadow: 0 0 25px var(--mediumblue-color);
         }
 
     }

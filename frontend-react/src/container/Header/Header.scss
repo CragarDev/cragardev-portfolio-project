@@ -1,10 +1,4 @@
 #home {
-    // position: relative;
-    // background: url('../../assets/HeaderBg07.png');
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
-
     .app__wrapper {
         padding: 0;
 
@@ -56,7 +50,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+    margin-top: 4rem;
 
     .badge-cmp,
     .tag-cmp {
@@ -97,7 +92,7 @@
     flex: 0.75;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
     height: 100%;
     margin-left: 1rem;
@@ -117,103 +112,157 @@
     }
 
     div:nth-child(1) {
-        margin: 0;
-        width: 140px;
-        height: 140px;
+        margin: 0 0 0 0rem;
+        width: 120px;
+        height: 120px;
         border: 8px solid var(--mediumblue-color);
     }
 
     div:nth-child(2) {
-        margin: 3rem 0 2rem 5rem;
-        width: 180px;
-        height: 180px;
-        border: 12px solid var(--mediumblue-color);
+        margin: 4rem 0 1rem 7.5rem;
+        width: 160px;
+        height: 160px;
+        border: 10px solid var(--mediumblue-color);
     }
 
     div:nth-child(3) {
-        margin: 1rem 3rem;
-        width: 120px;
-        height: 120px;
+        margin: 2rem 4rem;
+        width: 100px;
+        height: 100px;
         border: 6px solid var(--mediumblue-color);
     }
 
     div:nth-child(4) {
-        margin: 1rem 0;
-        width: 90px;
-        height: 90px;
+        margin: 2rem 0;
+        width: 70px;
+        height: 70px;
         border: 6px solid var(--mediumblue-color);
     }
 
-    // @media screen and (min-width: 2000px) {
-    //     div:nth-child(1) {
-    //         margin: 2rem;
-    //         width: 140px;
-    //         height: 140px;
-    //         border: 8px solid var(--mediumblue-color);
-    //     }
+    @media screen and (min-width: 2000px) {
+        justify-content: space-evenly;
 
-    //     div:nth-child(2) {
-    //         margin: 3.75rem;
-    //         width: 180px;
-    //         height: 180px;
-    //         border: 10px solid var(--mediumblue-color);
-    //     }
+        div:nth-child(1) {
+            margin: 0 0 0 1.5rem;
+            width: 140px;
+            height: 140px;
+            border: 8px solid var(--mediumblue-color);
+        }
 
-    //     div:nth-child(3) {
-    //         margin: 1rem;
-    //         width: 120px;
-    //         height: 120px;
-    //         border: 6px solid var(--mediumblue-color);
-    //     }
+        div:nth-child(2) {
+            margin: 0 0 0 8.5rem;
+            width: 180px;
+            height: 180px;
+            border: 10px solid var(--mediumblue-color);
+        }
 
-    //     div:nth-child(4) {
-    //         margin: .5rem;
-    //         width: 80px;
-    //         height: 80px;
-    //         border: 6px solid var(--mediumblue-color);
-    //     }
-    // }
+        div:nth-child(3) {
+            margin: 0 0 0 5.5rem;
+            width: 120px;
+            height: 120px;
+            border: 6px solid var(--mediumblue-color);
+        }
 
-    // @media screen and (max-width: 1200px) {
-    //     width: 100%;
-    //     flex-direction: row;
-    //     flex-wrap: wrap;
-    //     margin-left: 0;
+        div:nth-child(4) {
+            margin: 0 0 0 0rem;
+            width: 90px;
+            height: 90px;
+            border: 6px solid var(--mediumblue-color);
+        }
+    }
 
-    //     div {
-    //         margin: 1rem;
-    //     }
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
 
-    //     div:nth-child(1) {
-    //         width: 80px;
-    //         height: 80px;
-    //         border: 5px solid var(--mediumblue-color);
-    //     }
+        div {
+            margin: 1rem;
+        }
 
-    //     div:nth-child(2) {
-    //         margin: 1.75rem;
-    //         width: 100px;
-    //         height: 100px;
-    //         border: 7px solid var(--mediumblue-color);
-    //     }
+        div:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            border: 5px solid var(--mediumblue-color);
+            margin: 2rem;
+        }
 
-    //     div:nth-child(3) {
-    //         width: 60px;
-    //         height: 60px;
-    //         border: 3px solid var(--mediumblue-color);
-    //     }
+        div:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            border: 5px solid var(--mediumblue-color);
+            margin: 2rem 2rem 4rem 2rem;
+        }
 
-    // }
+        div:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            border: 5px solid var(--mediumblue-color);
+            margin: 2rem;
+        }
+
+        div:nth-child(4) {
+            width: 120px;
+            height: 120px;
+            border: 5px solid var(--mediumblue-color);
+            margin: 2rem;
+        }
+
+    }
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+
+        div {
+            margin: 1rem;
+        }
+
+        div:nth-child(1) {
+            width: 60px;
+            height: 60px;
+            border: 5px solid var(--mediumblue-color);
+            margin: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        div:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            border: 5px solid var(--mediumblue-color);
+            margin: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        div:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            border: 5px solid var(--mediumblue-color);
+            margin: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        div:nth-child(4) {
+            width: 60px;
+            height: 60px;
+            border: 5px solid var(--mediumblue-color);
+            margin: 1rem;
+            margin-bottom: 2rem;
+        }
+
+    }
 }
 
 
 .app__header-img {
     flex: 1;
     height: 100%;
-
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     position: relative;
 
     img {

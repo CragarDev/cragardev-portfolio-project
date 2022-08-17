@@ -60,8 +60,8 @@ const NavBar = () => {
               {[
                 'home',
                 'about',
-                'skills',
                 'projects',
+                'skills',
                 'testimonials',
                 'contact'
               ].map(item => (
