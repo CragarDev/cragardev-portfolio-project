@@ -1,30 +1,4 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import './NavBar.scss'
-import { images } from '../../constants/'
-import { HiMenuAlt4, HiX } from 'react-icons/hi'
-import { AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai'
-import { motion } from 'framer-motion'
-
-//todo: Change the Logo to my own logo ---------------------------------------
-//todo: Change the Background Image in the popout menu ---------------------------------------
-
-const NavBar = () => {
-  const [toggle, setToggle] = useState(false)
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
-  useEffect(() => {
-    window.addEventListener(
-      'resize',
-      () => {
-        setWindowWidth(window.innerWidth)
-      },
-      false
-    )
-  }, [])
-
-  return (
-    <nav className='app__navbar'>
+<nav className='app__navbar'>
       <div className='app__navbar-logo'>
         <img src={images.CragarDevLogo6} alt='logo' />
       </div>
@@ -89,7 +63,3 @@ const NavBar = () => {
         )}
       </div>
     </nav>
-  )
-}
-
-export default NavBar

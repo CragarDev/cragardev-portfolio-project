@@ -30,6 +30,7 @@ import java2 from "../../src/assets/JavaLogo2.png";
 import logoP from "../../src/assets/logoP.png";
 import navMenuBg2 from "../../src/assets/navMenuBg2.png";
 import navMenuBg3 from "../../src/assets/navMenuBg3.png";
+import navMenuBg4 from "../../src/assets/navMenuBg4.png";
 // import logo from "../../src/assets/logo.svg";
 import cragarDevLogo1 from "../../src/assets/cragarDevLogo1.svg";
 import cragarDevLogo2 from "../../src/assets/cragarDevLogo2.svg";
@@ -72,6 +73,7 @@ export default {
   aboutBg01,
   navMenuBg2,
   navMenuBg3,
+  navMenuBg4,
   about01,
   about02,
   about03,
