@@ -15,7 +15,7 @@ const NavBar = () => {
   useEffect(() => {
     const query = `*[_type == "resume"]{name, "resumeURL": resumeurl.asset->url}`
     client.fetch(query).then(data => {
-      console.log('::: resume data[0].resumeURL :::==>', data[0].resumeURL)
+      // console.log('::: resume data[0].resumeURL :::==>', data)
       setResume(data[0].resumeURL)
     })
 
