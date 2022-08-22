@@ -12,7 +12,7 @@ const About = () => {
     const query = '*[_type == "about"]'
 
     client.fetch(query).then(data => {
-      console.log('::: data :::==>', data)
+      // console.log('::: about data :::==>', data)
       setAbout(data)
     })
   }, [])

@@ -1,19 +1,24 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { urlFor, client } from '../../client'
 import './NavBar.scss'
 import { images } from '../../constants/'
-import { HiMenuAlt4, HiX } from 'react-icons/hi'
+import { HiMenuAlt4, HiX, HiOutlineDocumentDownload } from 'react-icons/hi'
 import { AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
-
-//todo: Change the Logo to my own logo ---------------------------------------
-//todo: Change the Background Image in the popout menu ---------------------------------------
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [resume, setResume] = useState([])
 
   useEffect(() => {
+    const query = `*[_type == "resume"]{name, "resumeURL": resumeurl.asset->url}`
+    client.fetch(query).then(data => {
+      console.log('::: resume data[0].resumeURL :::==>', data[0].resumeURL)
+      setResume(data[0].resumeURL)
+    })
+
     window.addEventListener(
       'resize',
       () => {
@@ -41,6 +46,14 @@ const NavBar = () => {
         )}
       </ul>
       <div className='app__navbar-sites'>
+        <a
+          className='resume_container'
+          href={`${resume}?dl=Craig_Burke_Resume_download.pdf`}
+        >
+          <HiOutlineDocumentDownload />
+          <p>resume</p>
+        </a>
+
         <a href='https://github.com/CragarDev' target={'_blank'}>
           <AiOutlineGithub />
         </a>
@@ -82,6 +95,12 @@ const NavBar = () => {
                   target='_blank'
                 >
                   <AiOutlineLinkedin />
+                </a>
+              </li>
+              <li>
+                <a href='#home' target={'_blank'}>
+                  <HiOutlineDocumentDownload />
+                  <p>resume</p>
                 </a>
               </li>
             </ul>

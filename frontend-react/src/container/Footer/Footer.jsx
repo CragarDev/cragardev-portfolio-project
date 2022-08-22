@@ -16,13 +16,13 @@ const Footer = () => {
   const [loading, setLoading] = useState(false)
 
   const handleChangeInput = e => {
-    console.log('handleChangeInput', e.target.value)
+    // console.log('handleChangeInput', e.target.value)
     const { name, value } = e.target
     setFormData({ ...formData, [name]: value })
   }
 
   const handleSubmit = () => {
-    console.log('handleSubmit')
+    // console.log('handleSubmit')
     setLoading(true)
 
     const contact = {

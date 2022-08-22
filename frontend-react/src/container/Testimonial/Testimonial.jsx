@@ -16,12 +16,12 @@ const Testimonial = () => {
     const skillsQuery = '*[_type == "brands"]'
 
     client.fetch(query).then(data => {
-      console.log('::: testimonials data :::==>', data)
+      // console.log('::: testimonials data :::==>', data)
       setTestimonials(data)
     })
 
     client.fetch(skillsQuery).then(data => {
-      console.log('::: brands data :::==>', data)
+      // console.log('::: brands data :::==>', data)
       setBrands(data)
     })
   }, [])

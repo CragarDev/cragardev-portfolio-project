@@ -239,4 +239,26 @@
     @media screen and (max-width: 950px) {
         display: none;
     }
+
+    .resume_container {
+        font-size: 3rem;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-right: 20px;
+
+        svg {
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: .85rem;
+        }
+    }
 }

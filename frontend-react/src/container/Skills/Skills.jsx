@@ -14,12 +14,12 @@ const Skills = () => {
     const skillsQuery = '*[_type == "skills"]'
 
     client.fetch(query).then(data => {
-      console.log('::: experience data :::==>', data)
+      // console.log('::: experience data :::==>', data)
       setExperience(data)
     })
 
     client.fetch(skillsQuery).then(data => {
-      console.log('::: skills data :::==>', data)
+      // console.log('::: skills data :::==>', data)
       setSkills(data)
     })
   }, [])
@@ -31,27 +31,23 @@ const Skills = () => {
       </h2>
       <div className='app__skills-container'>
         <motion.div className='app__skills-list'>
-          {skills.map(
-            skill => (
-              console.log('::: skills :::==>', skill),
-              (
-                <motion.div
-                  key={`skill-${skill.name}`}
-                  className='app__skills-item app__flex'
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <div
-                    className='app__flex'
-                    style={{ backgroundColor: skill.bgcolor }}
-                  >
-                    <img src={urlFor(skill.icon)} alt={skill.name} />
-                  </div>
-                  <p className='p-text'>{skill.name}</p>
-                </motion.div>
-              )
-            )
-          )}
+          {skills.map(skill => (
+            // console.log('::: skills :::==>', skill),
+            <motion.div
+              key={`skill-${skill.name}`}
+              className='app__skills-item app__flex'
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5 }}
+            >
+              <div
+                className='app__flex'
+                style={{ backgroundColor: skill.bgcolor }}
+              >
+                <img src={urlFor(skill.icon)} alt={skill.name} />
+              </div>
+              <p className='p-text'>{skill.name}</p>
+            </motion.div>
+          ))}
         </motion.div>
 
         <motion.div className='app__skills-exp'>
