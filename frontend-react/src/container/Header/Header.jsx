@@ -45,12 +45,46 @@ const Header = () => {
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.85, delayChildren: 0.85 }}
         >
-          <img src={images.CraigAvatarStanding02} alt='profile' />
+          <div className='photos_container'>
+            <img src={images.C01} alt='pict01' />
+            <img src={images.C03} alt='pict03' />
+            <img src={images.C04} alt='pict04' />
+            <img src={images.C05} alt='pict05' />
+            <img src={images.C06} height={800} alt='pict06' />
+            <img src={images.C07} alt='pict07' />
+            <img src={images.C08} alt='pict08' />
+            <img src={images.C09} alt='pict09' />
+            <img src={images.C10} alt='pict10' />
+            <img src={images.C11} alt='pict11' />
+            <img src={images.C12} alt='pict12' />
+          </div>
+          <div className="big_pict_container">
+            <motion.img
+              className='avatar'
+              whileHover={{ scale: 1.1, opacity: 0 }}
+              transition={{
+                duration: 0.7,
+                ease: 'easeInOut'
+              }}
+              src={images.CraigAvatarStanding02}
+              alt='profile'
+            />
+            <motion.img
+              className='big_pict'
+              whileHover={{ scale: 1.1, opacity: 1 }}
+              transition={{
+                duration: 0.7,
+                ease: 'easeInOut'
+              }}
+              src={images.C064}
+              alt='pict06'
+            />
+          </div>
           <motion.img
             className='overlay_circle'
             whileInView={{ scale: [0, 1] }}
             transition={{
-              duration: 1,
+              duration: 1.5,
               ease: 'easeInOut'
             }}
             src={images.circle_04}

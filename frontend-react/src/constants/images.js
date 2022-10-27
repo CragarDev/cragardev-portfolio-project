@@ -38,6 +38,21 @@ import CragarDevLogo3 from "../../src/assets/CragarDevLogo3.png";
 import CragarDevLogo4 from "../../src/assets/CragarDevLogo4.png";
 import CragarDevLogo6 from "../../src/assets/CragarDevLogo6.png";
 import Craig01 from "../../src/assets/Craig01.png";
+import C01 from "../../src/assets/C01.png";
+import C02 from "../../src/assets/C02.png";
+import C03 from "../../src/assets/C03.png";
+import C04 from "../../src/assets/C04.png";
+import C05 from "../../src/assets/C05.png";
+import C06 from "../../src/assets/C06.png";
+import C062 from "../../src/assets/C06-2.png";
+import C063 from "../../src/assets/C06-3.png";
+import C064 from "../../src/assets/C06-4.png";
+import C07 from "../../src/assets/C07.png";
+import C08 from "../../src/assets/C08.png";
+import C09 from "../../src/assets/C09.png";
+import C10 from "../../src/assets/C10.png";
+import C11 from "../../src/assets/C11.png";
+import C12 from "../../src/assets/C12.png";
 import craigAvatar from "../../src/assets/craigAvatar.png";
 import CraigAvatarStanding01 from "../../src/assets/CraigAvatarStanding01.png";
 import CraigAvatarStanding02 from "../../src/assets/CraigAvatarStanding02.png";
@@ -64,6 +79,21 @@ export default {
   CragarDevLogo4,
   CragarDevLogo6,
   Craig01,
+  C01,
+  C02,
+  C03,
+  C04,
+  C05,
+  C06,
+  C062,
+  C063,
+  C064,
+  C07,
+  C08,
+  C09,
+  C10,
+  C11,
+  C12,
   craigAvatar,
   CraigAvatarStanding01,
   CraigAvatarStanding02,

@@ -33,7 +33,7 @@ const NavBar = () => {
       <div className='app__navbar-logo'>
         <img src={images.CragarDevLogo6} alt='logo' />
       </div>
-      {/* <h3>{windowWidth}</h3> */}
+      <h3>{windowWidth}</h3>
       <ul className='app__navbar-links'>
         {['home', 'about', 'projects', 'skills', 'testimonials', 'contact'].map(
           item => (
