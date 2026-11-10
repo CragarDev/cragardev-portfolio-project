@@ -14,11 +14,15 @@ node_modules
 # testing
 /coverage
 
+
 # production
 /build
+/frontend-react/build/
+/frontend-react/dist/
 
 # Compiled sanity studio
 /dist
+
 
 # misc
 .DS_Store
