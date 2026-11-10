@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { client } from "../../client";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -10,38 +9,61 @@ const Footer = () => {
     email: "",
     message: ""
   });
-  const { name, email, message } = formData;
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChangeInput = (e) => {
-    // console.log('handleChangeInput', e.target.value)
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+
+    setFormData((previous) => ({
+      ...previous,
+      [name]: value
+    }));
   };
 
-  const handleSubmit = () => {
-    // console.log('handleSubmit')
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    // Prevent misleading success messages in local previews.
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+      setError("Contact form submissions will be available after deployment to Netlify.");
+      return;
+    }
+
     setLoading(true);
 
-    const contact = {
-      _type: "contact",
-      name: name,
-      email: email,
-      message: message
-    };
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams(new FormData(e.currentTarget)).toString()
+      });
 
-    client.create(contact).then(() => {
-      setLoading(false);
+      if (!response.ok) {
+        throw new Error(`Form submission failed: ${response.status}`);
+      }
+
       setIsFormSubmitted(true);
-    });
+    } catch (err) {
+      console.error("Contact form error:", err);
+
+      setError("Sorry, your message could not be sent. Please try again or contact me by email.");
+    } finally {
+      setLoading(false);
+    }
   };
+
   return (
     <>
       <h2 className="head-text">
         <span>Grab a coffee... </span> let's chat!
       </h2>
+
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.celphone} alt="mobile" />
@@ -49,6 +71,7 @@ const Footer = () => {
             cel: +1 (214) 957-0713
           </a>
         </div>
+
         <div className="app__footer-card">
           <img src={images.email01} alt="email" />
           <a href="mailto:cragardev@gmail.com" className="p-text_dark">
@@ -58,22 +81,47 @@ const Footer = () => {
       </div>
 
       {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
+        <form className="app__footer-form app__flex" name="portfolio-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+          <input type="hidden" name="form-name" value="portfolio-contact" />
+
+          <input
+            type="text"
+            name="bot-field"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              left: "-9999px"
+            }}
+          />
+
           <div className="app__flex">
-            <input className="p-text" type="text" placeholder="Your Name" name="name" value={name} onChange={handleChangeInput} />
+            <input className="p-text" type="text" placeholder="Your Name" aria-label="Your Name" name="name" value={formData.name} onChange={handleChangeInput} required />
           </div>
+
           <div className="app__flex">
-            <input className="p-text" type="text" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+            <input className="p-text" type="email" placeholder="Your Email" aria-label="Your Email" name="email" value={formData.email} onChange={handleChangeInput} required />
           </div>
+
           <div>
-            <textarea className="p-text" name="message" value={message} onChange={handleChangeInput} placeholder="Your Message"></textarea>
+            <textarea className="p-text" name="message" value={formData.message} onChange={handleChangeInput} placeholder="Your Message" aria-label="Your Message" required />
           </div>
-          <button className="p-text_dark" type="button" onClick={handleSubmit}>
-            {loading ? "SENDING" : "Send Message"}
+
+          {error && (
+            <p className="p-text" role="alert" style={{ color: "var(--darkorange-color)" }}>
+              {error}
+            </p>
+          )}
+
+          <button className="p-text_dark" type="submit" disabled={loading}>
+            {loading ? "SENDING..." : "Send Message"}
           </button>
-        </div>
+        </form>
       ) : (
-        <div className="head-text">Thank You for getting in touch!</div>
+        <div className="head-text" role="status">
+          Thank you for getting in touch!
+        </div>
       )}
     </>
   );
