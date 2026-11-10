@@ -55,7 +55,7 @@ const Header = () => {
           </div>
 
           <div className="big_pict_container">
-            <motion.img className="avatar" src={images.CraigAvatarStanding02} alt="Craig avatar" />
+            <motion.img className="avatar" src={images.CraigAvatar2026} alt="Craig avatar" />
           </div>
 
           <motion.img

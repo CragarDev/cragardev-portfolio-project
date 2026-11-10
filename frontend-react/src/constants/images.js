@@ -56,6 +56,7 @@ import C12 from "../../src/assets/C12.png";
 import craigAvatar from "../../src/assets/craigAvatar.png";
 import CraigAvatarStanding01 from "../../src/assets/CraigAvatarStanding01.png";
 import CraigAvatarStanding02 from "../../src/assets/CraigAvatarStanding02.png";
+import CraigAvatar2026 from "../../src/assets/CraigAvatar2026.png";
 import HeaderBg01 from "../../src/assets/HeaderBg01.png";
 import HeaderBg02 from "../../src/assets/HeaderBg02.png";
 import mobile from "../../src/assets/mobile.png";
@@ -97,6 +98,7 @@ const images = {
   craigAvatar,
   CraigAvatarStanding01,
   CraigAvatarStanding02,
+  CraigAvatar2026,
   celphone,
   HeaderBg01,
   HeaderBg02,
