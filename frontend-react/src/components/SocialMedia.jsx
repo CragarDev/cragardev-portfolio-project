@@ -1,11 +1,11 @@
-import React from 'react'
-import { BsTwitter, BsInstagram } from 'react-icons/bs'
-import { FaFacebook, FaFacebookF } from 'react-icons/fa'
+import React from "react";
+import { BsTwitter, BsInstagram } from "react-icons/bs";
+import { FaFacebook } from "react-icons/fa";
 
 const SocialMedia = () => {
   return (
     <>
-      <div className='app__social'>
+      <div className="app__social">
         <div>
           <BsTwitter />
         </div>
@@ -17,7 +17,7 @@ const SocialMedia = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SocialMedia
+export default SocialMedia;

@@ -72,7 +72,7 @@ import spotify from "../../src/assets/spotify.png";
 import typescript from "../../src/assets/typescript.png";
 import vue from "../../src/assets/vue.png";
 
-export default {
+const images = {
   cragarDevLogo1,
   cragarDevLogo2,
   CragarDevLogo3,
@@ -147,3 +147,5 @@ export default {
   typescript,
   vue
 };
+
+export default images;
