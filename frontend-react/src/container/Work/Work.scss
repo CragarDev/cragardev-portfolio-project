@@ -187,3 +187,16 @@
         word-break: normal;
     }
 }
+
+/* Project card description typography */
+.app__work-item .p-text {
+    font-size: 20px;
+    line-height: 1.45;
+}
+
+@media screen and (max-width: 600px) {
+    .app__work-item .p-text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}

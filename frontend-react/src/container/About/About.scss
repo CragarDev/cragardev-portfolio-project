@@ -110,3 +110,16 @@
         padding: 1rem;
     }
 }
+
+/* About card description typography */
+.app__profiles-item .p-text {
+    font-size: 20px;
+    line-height: 1.45;
+}
+
+@media screen and (max-width: 600px) {
+    .app__profiles-item .p-text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
