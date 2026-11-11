@@ -44,12 +44,10 @@ const About = () => {
           {about.map((abt, index) => (
             <motion.div className="app__profiles-item" whileInView={{ opacity: 1 }} whileHover={{ y: -6 }} transition={{ duration: 0.5, type: "tween", delayChildren: 0.5 }} key={abt.name + index}>
               <img src={urlFor(abt.imgurl)} alt={abt.name} />
-              <h2 id="abt-title" className="bold-text" style={{ marginTop: 20 }}>
+              <h2 id="abt-title" className="bold-text">
                 {abt.name}
               </h2>
-              <p className="p-text" style={{ marginTop: 10 }}>
-                {abt.description}
-              </p>
+              <p className="p-text">{abt.description}</p>
             </motion.div>
           ))}
         </div>
