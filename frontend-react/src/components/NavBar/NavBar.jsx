@@ -39,7 +39,7 @@ const NavBar = () => {
         ))}
       </ul>
       <div className="app__navbar-sites">
-        <a className="resume_container" href={`${resume}?dl=Craig_Burke_Resume_download.pdf`}>
+        <a className="resume_container" href={`${resume}?dl=Craig_Burke_Resume_2026.pdf`}>
           <HiOutlineDocumentDownload />
           <p>resume</p>
         </a>
@@ -76,7 +76,7 @@ const NavBar = () => {
               </li>
 
               <li>
-                <a href={`${resume}?dl=Craig_Burke_Resume_download.pdf`} onClick={() => setToggle(false)}>
+                <a href={`${resume}?dl=Craig_Burke_Resume_2026.pdf`} onClick={() => setToggle(false)}>
                   <HiOutlineDocumentDownload />
                   <p>resume</p>
                 </a>
