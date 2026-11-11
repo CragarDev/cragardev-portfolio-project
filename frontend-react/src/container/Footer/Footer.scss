@@ -127,3 +127,30 @@
         margin: 1rem 0
     }
 }
+
+/* Contact headline spacing */
+.app__footer .head-text {
+    margin-bottom: 0;
+}
+
+.app__footer-subheading {
+    max-width: 750px;
+    margin: 0.35rem auto 0;
+    padding: 0 1.5rem;
+
+    color: #a9c3cc;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+
+    @media screen and (max-width: 600px) {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+}
+
+.app__footer-subheading+.app__footer-cards {
+    margin-top: 1.5rem;
+}

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Skills.scss";
-import { Tooltip } from "react-tooltip";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -10,17 +9,22 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "experience"]';
-    const skillsQuery = '*[_type == "skills"]';
+    const query = '*[_type == "experience"] | order(year desc)';
 
-    client.fetch(query).then((data) => {
-      // console.log('::: experience data :::==>', data)
-      setExperience(data);
-    });
+    const skillsQuery = '*[_type == "skills" && featured == true] | order(displayOrder asc)';
 
-    client.fetch(skillsQuery).then((data) => {
-      // console.log('::: skills data :::==>', data)
-      setSkills(data);
+    const legacySkillsQuery = '*[_type == "skills" && !(name in ["SwiftUI", "SQL", "Blender"])]';
+
+    client.fetch(query).then(setExperience);
+
+    client.fetch(skillsQuery).then((featuredSkills) => {
+      // Keep the existing published lineup until all 16
+      // featured skills have been published.
+      if (featuredSkills.length === 16) {
+        setSkills(featuredSkills);
+      } else {
+        client.fetch(legacySkillsQuery).then(setSkills);
+      }
     });
   }, []);
 
@@ -51,15 +55,14 @@ const Skills = () => {
                 <p className="bold-text">{experience.year}</p>
               </div>
               <motion.div className="app__skills-exp-works">
-                {experience.works.map((work) => (
-                  <>
-                    <motion.div className="app__skills-exp-work app__flex" whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5 }} data-tooltip-content={work.description} data-tooltip-id={`name-${work.name}`} key={`name-${work.name}`}>
-                      <h4 className="bold-text-exp">{work.name}</h4>
-                      <p className="p-text">{work.company}</p>
-                      {/* <p className='p-text'>{work.description}</p> */}
-                    </motion.div>
-                    <Tooltip id={`name-${work.name}`} className="skills-tooltip" />
-                  </>
+                {experience.works.map((work, index) => (
+                  <motion.div className="app__skills-exp-work" key={`${experience.year}-${work.name}-${index}`} whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5 }}>
+                    <h4 className="bold-text-exp">{work.name}</h4>
+
+                    <p className="app__skills-exp-company">{work.company}</p>
+
+                    {work.description && <p className="app__skills-exp-description">{work.description}</p>}
+                  </motion.div>
                 ))}
               </motion.div>
             </motion.div>

@@ -61,8 +61,10 @@ const Footer = () => {
   return (
     <>
       <h2 className="head-text">
-        <span>Grab a coffee... </span> let's chat!
+        <span>Have An Idea? </span> Let's Make It Happen!
       </h2>
+
+      <p className="app__footer-subheading">Apps, automation, animation, and creative solutions — let's bring your vision to life.</p>
 
       <div className="app__footer-cards">
         <div className="app__footer-card">
